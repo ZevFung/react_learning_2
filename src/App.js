@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Browser from './components/Browser';
+import NameCard from './components/NameCard';
+import "bootstrap/dist/css/bootstrap.css"
 
 class App extends Component {
   render() {
+    const tag = ['可爱',"活泼"]
     return (
       <div className="App">
         <header className="App-header">
@@ -20,9 +24,13 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <Browser/>
+        <NameCard name="冯子武" phone="15889833384" age="28" job="软件工程师" isMan="true" tag={tag}/>
       </div>
+       
     );
   }
 }
 
 export default App;
+
